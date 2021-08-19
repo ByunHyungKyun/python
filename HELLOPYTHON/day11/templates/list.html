@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>회원 리스트</h1>
+<table border="1">
+<tr>
+	<th>회원 아이디</th>
+	<th>회원 이름</th>
+	<th>회원 생일</th>
+</tr>
+{% for emp in mylist %}
+<tr>
+	<td><a href="/select?e_id={{emp.e_id}}">{{emp.e_id}}</a></td>
+	<td>{{emp.e_name}}</td>
+	<td>{{emp.birth}}</td>
+</tr>
+ {% endfor %}
+</table>
+</body>
+</html>

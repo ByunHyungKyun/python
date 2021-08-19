@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>회원 리스트</h1>
+<table border="1">
+{% for emp in myinfo %}
+<tr>
+	<td>아이디</td>
+	<td>{{emp.e_id}}</td>
+</tr>
+<tr>
+	<td>회원 이름</td>
+	<td>{{emp.e_name}}</td>
+</tr>
+<tr>
+	<td>회원 생일</td>	
+	<td>{{emp.birth}}</td>
+</tr>
+<tr>
+	<td><a href="#">회원추가</a> <a href="#">회원수정</a> <a href="#">회원삭제</a></td>
+</tr>
+ {% endfor %}
+</table>
+</body>
+</html>
